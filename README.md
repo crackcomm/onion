@@ -10,20 +10,20 @@ o := onion.New(
     tor.WithBin("/usr/bin/tor"),
     tor.WithVerbose(true),
   ),
-  nacl.NewLayer(
-    nacl.WithPubKey(readPubKey()),
-    nacl.WithPrivKey(readPrivKey()),
+  sch.NewLayer(
+    sch.WithPubKey(readPubKey()),
+    sch.WithPrivKey(readPrivKey()),
   ),
   tls.NewLayer(
     tls.WithCertKeyFile("ca.pem", "ca.key"),
   ),
-  nacl.NewLayer(
-    nacl.WithPubKey(readPubKey()),
-    nacl.WithPrivKey(readPrivKey()),
+  sch.NewLayer(
+    sch.WithPubKey(readPubKey()),
+    sch.WithPrivKey(readPrivKey()),
   ),
-  nacl.NewLayer(
-    nacl.WithPubKey(readPubKey()),
-    nacl.WithPrivKey(readPrivKey()),
+  sch.NewLayer(
+    sch.WithPubKey(readPubKey()),
+    sch.WithPrivKey(readPrivKey()),
   ),
 )
 ```
