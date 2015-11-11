@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package torctl;
+
+option go_package = "torctl";
+
+import "messages.proto";
+// import "google/api/annotations.proto";
+
+service Proxies {
+
+  rpc GetProxy(ProxyRequest) returns (ProxyResponse) {
+    // option (google.api.http) = {
+    //   post: "/tower/services/proxies/acquire"
+    //   body: "*"
+    // };
+  }
+
+  rpc Release(ReleaseRequest) returns (Empty) {
+    // option (google.api.http) = {
+    //   post: "/tower/services/proxies/{id}/release"
+    // };
+  }
+
+  rpc RefreshLock(RefreshProxy) returns (Empty) {
+    // option (google.api.http) = {
+    //   post: "/tower/services/proxies/{id}/hold"
+    //   body: "*"
+    // };
+  }
+
+}
