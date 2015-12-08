@@ -9,13 +9,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/crackcomm/onion/proxyutil"
-	"github.com/crackcomm/onion/tor/torctl"
 	"github.com/golang/glog"
 	"github.com/yawning/bulb"
 
 	"golang.org/x/net/context"
 	"golang.org/x/net/proxy"
+
+	"github.com/crackcomm/onion/proxyutil"
+	"github.com/crackcomm/torctl"
 )
 
 // Layer - TOR Layer.

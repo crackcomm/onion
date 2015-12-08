@@ -11,10 +11,10 @@ import (
 	"github.com/golang/glog"
 
 	"github.com/crackcomm/onion"
-	netl "github.com/crackcomm/onion/net"
-	"github.com/crackcomm/onion/sch"
-	"github.com/crackcomm/onion/tls"
-	"github.com/crackcomm/onion/tor"
+	netlayer "github.com/crackcomm/onion/layer/net"
+	"github.com/crackcomm/onion/layer/sch"
+	"github.com/crackcomm/onion/layer/tls"
+	"github.com/crackcomm/onion/layer/tor"
 )
 
 var (
@@ -38,7 +38,7 @@ func main() {
 
 	// Create an onion
 	o := onion.New(
-		netl.NewLayer(),
+		netlayer.NewLayer(),
 		tor.NewLayer(
 			tor.WithBin(*torBin),
 			tor.WithPort(80),

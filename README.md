@@ -1,5 +1,7 @@
 # onion
 
+[![GoDoc](https://godoc.org/github.com/crackcomm/onion?status.svg)](https://godoc.org/github.com/crackcomm/onion)
+
 Make an onion made of net and crypto layers.
 
 ```Go
